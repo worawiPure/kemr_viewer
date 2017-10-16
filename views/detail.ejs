@@ -1,0 +1,82 @@
+<h4>HN : <%=visit.hn%> ชื่อผู้ป่วย <%=visit.ptname%></h4>
+<table class="table">
+    <tbody>
+      <tr>
+        <th>วันที่</th>
+        <td><%=visit.vstdate%> เวลา <%=visit.vsttime%> น.</td>
+      </tr>
+      <tr>
+        <th>แผนกหลัก</th>
+        <td><%=visit.department%></td>
+      </tr>
+      <tr>
+        <th>แผนกย่อย</th>
+        <td><%=visit.spclty%></td>
+      </tr>
+      <tr>
+        <th>สิทธิ์การรักษา</th>
+        <td><%=visit.pttype%></td>
+      </tr>
+      <tr>
+        <th>แพทย์ผู้ตรวจ</th>
+        <td><%=visit.doctor%></td>
+      </tr>
+      <tr>
+        <th>วินิจฉัยโรค</th>
+        <td><%=visit.diag%></td>
+      </tr>
+    </tbody>
+  </table>
+
+<p class="lead">OPD Card</p>
+<ul class="thumbnails">
+
+  <% img1.forEach(function(img){ %>
+   <li class="span4">
+    <a data-image data-image-url="<%=img.url%>" class="thumbnail">
+      <img src="<%=img.url%>">
+    </a>
+  </li>
+  <% }); %>
+
+</ul>
+<p class="lead">EKG</p>
+<ul class="thumbnails">
+    <% img2.forEach(function(img){ %>
+   <li class="span4">
+    <a data-image data-image-url="<%=img.url%>" href="#" class="thumbnail">
+      <img src="<%=img.url%>">
+    </a>
+  </li>
+  <% }); %>
+</ul>
+<p class="lead">LAB</p>
+<ul class="thumbnails">
+    <% img3.forEach(function(img){ %>
+   <li class="span4">
+    <a data-image data-image-url="<%=img.url%>" href="#" class="thumbnail">
+      <img src="<%=img.url%>">
+    </a>
+  </li>
+  <% }); %>
+</ul>
+<p class="lead">ใบส่งต่อ</p>
+<ul class="thumbnails">
+    <% img4.forEach(function(img){ %>
+   <li class="span4">
+    <a data-image data-image-url="<%=img.url%>" href="#" class="thumbnail">
+      <img src="<%=img.url%>">
+    </a>
+  </li>
+  <% }); %>
+</ul>
+<p class="lead">เอกสารอื่นๆ</p>
+<ul class="thumbnails">
+   <% img5.forEach(function(img){ %>
+   <li class="span4">
+    <a data-image data-image-url="<%=img.url%>" href="#" class="thumbnail">
+      <img src="<%=img.url%>">
+    </a>
+  </li>
+  <% }); %>
+</ul>
